@@ -12,7 +12,7 @@ jobs:
       - name: Print Hello World
         run: echo "Hello, GitHub Actions!" # This is just the command
       - name: Ping Google
-        run: ping -c 4 google.com
+        run: ping -c 4 8.8.8.8
 
       - name: Check Ping Results # Optional: Check if the ping was successful
         run: |
