@@ -11,3 +11,14 @@ jobs:
         run: git clone https://github.com/berezovsky13/nodejs.git  # Gets the latest code, in other words it does 'git clone' 
       - name: Print Hello World
         run: echo "Hello, GitHub Actions!" # This is just the command
+      - name: Ping Google
+        run: ping -c 4 google.com
+
+      - name: Check Ping Results # Optional: Check if the ping was successful
+        run: |
+          if [[ $? -eq 0 ]]; then # Check the exit code of the ping command
+            echo "Ping to Google was successful!"
+          else
+            echo "Ping to Google failed!"
+            exit 1 # Optional: Fail the workflow if the ping fails
+          fi
