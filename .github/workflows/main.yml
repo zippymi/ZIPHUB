@@ -13,7 +13,6 @@ jobs:
         run: echo "Hello, GitHub Actions!" # This is just the command
       - name: Ping Google
         run: ping -c 4 8.8.8.8
-
       - name: Check Ping Results # Optional: Check if the ping was successful
         run: |
           if [[ $? -eq 0 ]]; then # Check the exit code of the ping command
